@@ -30,9 +30,9 @@ class BaseDeploy(object):
         res = self.client.command.run(cmd)
         return res
 
-class FooYunDeploy(BaseDeploy):
+class SimpleDeploy(BaseDeploy):
     def __init__(self, host):
-        super(FooYunDeploy, self).__init__(host)
+        super(SimpleDeploy, self).__init__(host)
 
         self.ret_ok = 0
         self.ret_err = -1
@@ -104,7 +104,7 @@ class FooYunDeploy(BaseDeploy):
         return self.encode(res)
 
 def main(argv):
-    deploy = FooYunDeploy(argv[1])
+    deploy = SimpleDeploy(argv[1])
     method = {'restart': deploy.restart, 'stop': deploy.stop}
 
     return method[argv[0]](*tuple(argv[2:]))
