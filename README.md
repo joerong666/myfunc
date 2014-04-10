@@ -3,7 +3,7 @@ myfunc
 
 Description
 =======
-an improve version of fedora Func, easy to install and run for everyone(not only root to install and run)
+an improve version of fedora Func, easy to install and run under any directory for anyone(not only root)
 
 FUNC安装
 =======
