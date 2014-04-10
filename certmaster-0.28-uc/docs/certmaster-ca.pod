@@ -1,0 +1,38 @@
+=head1 NAME
+
+certmaster-ca -- signs certificate requests gathered by certmaster.
+
+=head1 SYNOPSIS
+
+certmaster-ca --list 
+
+certmaster-ca --sign machine.example.org
+
+=head1 DESCRIPTION
+
+"certmaster-ca --list"
+
+The list command prints all certificates that have been requested from certmaster by a remote application (such as funcd or certmaster-request) but are not yet signed.
+
+"certmaster-ca --sign [hostname]"
+
+This command is used to sign a certificate and send it back to the requester.
+
+=head1 AUTO-SIGNING
+
+The certmaster can be configured to make this command unneccessary; all incoming
+requests can be signed automatically by certmaster.
+
+To configure this, edit /etc/certmaster/certmaster.conf.
+
+=head1 ADDITONAL RESOURCES
+
+See https://fedorahosted.org/certmaster.  It's a Wiki.
+See also https://fedorahosted.org/func
+See also the manpages for "certmaster" and "certmaster-request".
+
+=head1 AUTHOR
+
+Various. See https://fedorahosted.org/certmaster
+and https://fedorahosted.org/func
+

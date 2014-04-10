@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: certmaster
+Version: 0.28
+Summary: certmaster remote configuration and management api
+Home-page: https://fedorahosted.org/certmaster/
+Author: Lots
+Author-email: func-list@redhat.com
+License: GPL
+Description: 
+        A small pluggable xml-rpc daemon used by certmaster to implement various web services hooks
+        
+Platform: UNKNOWN

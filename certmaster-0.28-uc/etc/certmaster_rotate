@@ -1,0 +1,19 @@
+/var/log/certmaster/audit.log {
+   missingok
+   notifempty
+   rotate 4
+   weekly
+   postrotate
+      if [ -f /var/lock/subsys/certmasterd ]; then
+         /etc/init.d/certmasterd condrestart
+      fi
+   endscript
+}
+
+/var/log/certmaster/certmaster.log {
+   missingok
+   notifempty
+   rotate 4
+   weekly
+}
+
