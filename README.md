@@ -77,6 +77,9 @@ $ cd $HOME/local/Python2.7.3/bin && ./python certmaster-ca -c platform1
 取消签名后，需将minion中的etc/pki/certmaster目录下对应于该minion的cert证书删除，如这里的platform1.cert,
 否则当下次再次启动minion时，在master的certmaster-ca -l中将看不到该minion
 
+FUNC API调用例子
+================
+deploy.py和test_deploy.sh是用使用Func API做自动部署的例子
 
 Q & A
 =========
